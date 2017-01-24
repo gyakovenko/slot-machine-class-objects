@@ -46,8 +46,8 @@ public class AppBasics {
 			} catch (NumberNotInRangeException e) {
 				System.out.println("You have not entered a number within the range of " + min + " and " + max + ".");
 			}
-			isNotValid = false;
 		}
+		isNotValid = false;
 		return result;
 	}
 
@@ -109,8 +109,7 @@ public class AppBasics {
 	public static void printIntArray(int[] anArray) {
 		System.out.print(anArray[0]);
 		for (int i = 1; i < anArray.length; i++) {
-			System.out.print(Integer.toString(anArray[i]));
-			System.out.print(", ");
+			System.out.print(", " + Integer.toString(anArray[i]));
 		}
 	}
 
