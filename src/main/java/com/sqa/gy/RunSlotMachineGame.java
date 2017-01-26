@@ -55,8 +55,8 @@ public class RunSlotMachineGame {
 					System.out.println("\n");
 					game.setUserBalance(game.getUserBalance() + spin.getWinnings());
 					if (game.getUserBalance() < .25) {
-						if (!MiscMethodsForSlotMachine.askDepositMoreOrDone(game.getUserBalance())) {
-							game.setUserPlaying(false);
+						game.setUserPlaying(MiscMethodsForSlotMachine.askDepositMoreOrDone(game.getUserBalance()));
+						if (game.isUserPlaying() == false) {
 						} else {
 							MiscMethodsForSlotMachine.acceptsUserDeposit(game.getUserBalance());
 							System.out.println("\n");
@@ -65,6 +65,7 @@ public class RunSlotMachineGame {
 				}
 			}
 		}
+
 		// Exiting Game
 		System.out.println("\n");
 		MiscMethodsForSlotMachine.printCashingOutMessage(game.getUserBalance());
