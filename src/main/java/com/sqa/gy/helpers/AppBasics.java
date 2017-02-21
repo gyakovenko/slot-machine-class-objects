@@ -35,7 +35,7 @@ public class AppBasics {
 			try {
 				result = Integer.parseInt(input);
 				if (min != 0 && max != 0) {
-					if (result < max && result > min) {
+					if (result <= max && result >= min) {
 						isNotValid = false;
 					} else {
 						throw new NumberNotInRangeException();
